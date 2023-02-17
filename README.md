@@ -19,6 +19,6 @@ $$\texttt{A brand new Luogu design - }\color{Peach}{\texttt{Argon++}}$$
 
 Copyright since 2022 **hellolin**
   
-Contact: `hellolinoi@outlook.com`。
+Contact: `hellolinoi@outlook.com`
   
 Under the [MIT License](https://mit-license.org/).
