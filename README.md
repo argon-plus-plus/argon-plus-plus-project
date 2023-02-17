@@ -2,7 +2,9 @@
 
 $$\texttt{A brand new Luogu design - }\color{Peach}{\texttt{Argon++}}$$
 
-[![Star History Chart](https://api.star-history.com/svg?repos=argon-plus-plus/argon-plus-plus-project&type=Date)](https://star-history.com/#argon-plus-plus/argon-plus-plus-project&Date)
+<div align="center"><img src="https://socialify.git.ci/argon-plus-plus/argon-plus-plus-project/image?description=1&font=Source%20Code%20Pro&forks=1&issues=1&language=1&name=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Dark"/></div>
+
+<!--![Star History Chart](https://api.star-history.com/svg?repos=argon-plus-plus/argon-plus-plus-project&type=Date)-->
 
 ## How to use it?
 
