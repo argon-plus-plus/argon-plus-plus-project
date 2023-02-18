@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Argon++
 // @namespace    https://hellolin.cf/
-// @version      0.1.0
+// @version      0.1.1
 // @description  Argron++ Helper
 // @author       Hellolin
 // @match        *://www.luogu.com.cn/*
@@ -15,7 +15,32 @@
 
 
 (function() {
+    var version="Beta v0.1.1"
+    setTimeout(function(){
+        console.log(`
+     ######\\
+    ##  __##\\                                            ##\\       ##\\
+    ## /  ## | ######\\   ######\\   ######\\  #######\\     ## |      ## |
+    ######## |##  __##\\ ##  __##\\ ##  __##\\ ##  __##\\ ########\\ ########\\
+    ##  __## |## |  \\__|## /  ## |## /  ## |## |  ## |\\__##  __|\\__##  __|
+    ## |  ## |## |      ## |  ## |## |  ## |## |  ## |   ## |      ## |
+    ## |  ## |## |      \\####### |\\######  |## |  ## |   \\__|      \\__|
+    \\__|  \\__|\\__|       \\____## | \\______/ \\__|  \\__|
+                        ##\\   ## |
+                        \\######  |
+                         \\______/
 
+    ${version}
+    By HelloLin`)
+    },500)
+    var cc = document.createElement('span')
+    cc.innerHTML=`
+    <br/>
+    Argon++ ${version} by Hellolin
+    <br/>
+    Bring you a brand new Luogu design.
+    `
+    document.getElementsByClassName('footer')[0].children[3].children[0].appendChild(cc)
 
 
 
@@ -82,6 +107,16 @@
                     var c_fts=localStorage.getItem('argonpp_code_font')
                     show_alert('Argon++', \`当前字体设置：\${c_fts}\`)
                 }
+                function argon_fontEnter(event)
+                {
+                    event=event||window.event
+                    if(event.keyCode==13) argon_changeFont()
+                }
+                function argon_fontCodeEnter(event)
+                {
+                    event=event||window.event
+                    if(event.keyCode==13) argon_changeCodeFont()
+                }
             </script>
 
             <div class="lg-article" id="search-user-form">
@@ -89,7 +124,7 @@
 
                 <p>字体设置（普通）<small>字体名单引号括起来，半角逗号隔开。不填默认 <code>system-ui</code>。</small></p>
                 <form id="font-ins">
-                    <input type="text" class="am-form-field" name="font-ins-t" placeholder="'Microsoft YaHei', 'Pingfang SC'" autocomplete="off" />
+                    <input onkeydown="argon_fontEnter()"  type="text" class="am-form-field" name="font-ins-t" placeholder="'Microsoft YaHei', 'Pingfang SC'" autocomplete="off" />
                 </form>
                 <div align="center">
                 <button style="margin-top: 10px" class="am-btn am-btn-sm am-btn-success" id="font-ins-ok" onclick="argon_changeFont()">应用</button>
@@ -98,7 +133,7 @@
 
                 <p>字体设置（代码）<small>会影响到行内代码和代码块。不填默认 <code>Consolas</code>。</small></p>
                 <form id="code-font-ins">
-                    <input type="text" class="am-form-field" name="code-font-ins-t" placeholder="'Fira Code', 'Space Mono for Powerline'" autocomplete="off" />
+                    <input onkeydown="argon_fontCodeEnter()" type="text" class="am-form-field" name="code-font-ins-t" placeholder="'Fira Code', 'Space Mono for Powerline'" autocomplete="off" />
                 </form>
                 <div align="center">
                 <button style="margin-top: 10px" class="am-btn am-btn-sm am-btn-success" id="code-font-ins-ok" onclick="argon_changeCodeFont()">应用</button>
@@ -112,20 +147,5 @@
 
         },500)})
     }
-    setTimeout(function(){
-        console.log(`
-     ######\\
-    ##  __##\\                                            ##\\       ##\\
-    ## /  ## | ######\\   ######\\   ######\\  #######\\     ## |      ## |
-    ######## |##  __##\\ ##  __##\\ ##  __##\\ ##  __##\\ ########\\ ########\\
-    ##  __## |## |  \\__|## /  ## |## /  ## |## |  ## |\\__##  __|\\__##  __|
-    ## |  ## |## |      ## |  ## |## |  ## |## |  ## |   ## |      ## |
-    ## |  ## |## |      \\####### |\\######  |## |  ## |   \\__|      \\__|
-    \\__|  \\__|\\__|       \\____## | \\______/ \\__|  \\__|
-                        ##\\   ## |
-                        \\######  |
-                         \\______/
 
-    By HelloLin`)
-    },500)
 })();
